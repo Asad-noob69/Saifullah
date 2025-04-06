@@ -107,9 +107,7 @@ export default function Home() {
                             1000+ Students For Free
                           </span>
                         </p>
-                        <div>
                         <LinkedInFollowersButton companyId="your-linkedin-company-id" />
-                        </div>
                       <Marquee3D />
 
                       </div>

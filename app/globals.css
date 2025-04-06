@@ -12,9 +12,9 @@
 }
 
 @layer base {
-  body {
+  /* body {
     @apply bg-background text-foreground;
-  }
+  } */
   :root {
     --color-1: 0 100% 63%;
     --color-2: 270 100% 63%;
@@ -215,11 +215,11 @@
 
 
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
