@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react";
+import { MailIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -18,7 +18,6 @@ import { Dock, DockIcon } from "@/components/magicui/dock";
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const Icons = {
-  calendar: (props: IconProps) => <CalendarIcon {...props} />,
   email: (props: IconProps) => <MailIcon {...props} />,
   linkedin: (props: IconProps) => (
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -62,25 +61,17 @@ const Icons = {
 };
 
 const DATA = {
-  navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: PencilIcon, label: "Blog" },
-  ],
+  
   contact: {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "#",
+        url: "https://github.com/saifullah72437/  ",
         icon: Icons.github,
-      },
-      LinkedIn: {
-        name: "LinkedIn",
-        url: "#",
-        icon: Icons.linkedin,
       },
       X: {
         name: "X",
-        url: "#",
+        url: "https://x.com/saif72437",
         icon: Icons.x,
       },
       email: {
@@ -94,34 +85,9 @@ const DATA = {
 
 export function DockDemo() {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-        Dock
-      </span>
+    <div className="flex flex-col items-center justify-center mb-8">
       <TooltipProvider>
         <Dock direction="middle">
-          {DATA.navbar.map((item) => (
-            <DockIcon key={item.label}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={item.href}
-                    aria-label={item.label}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full",
-                    )}
-                  >
-                    <item.icon className="size-4" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{item.label}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
-          <Separator orientation="vertical" className="h-full" />
           {Object.entries(DATA.contact.social).map(([name, social]) => (
             <DockIcon key={name}>
               <Tooltip>
@@ -131,7 +97,7 @@ export function DockDemo() {
                     aria-label={social.name}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full",
+                      "size-12 rounded-full"
                     )}
                   >
                     <social.icon className="size-4" />
@@ -143,17 +109,6 @@ export function DockDemo() {
               </Tooltip>
             </DockIcon>
           ))}
-          <Separator orientation="vertical" className="h-full py-2" />
-          <DockIcon>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <ModeToggle className="rounded-full" />
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Theme</p>
-              </TooltipContent>
-            </Tooltip>
-          </DockIcon>
         </Dock>
       </TooltipProvider>
     </div>

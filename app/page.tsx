@@ -13,7 +13,7 @@ import LinkedInFollowersButton from "@/components/magicui/LinkedInFollowersButto
 import { Marquee3D } from "../components/magicui/marquee2";
 import { AnimatedBeamMultipleOutputDemo } from "@/components/magicui/AnimatedBeam";
 import { Iphone15Pro } from "@/components/magicui/iphone-15-pro";
-import { DockDemo } from "@/components/magicui/dock2";
+import { DockDemo } from "@/components/magicui/contact";
 
 
 
@@ -53,7 +53,7 @@ export default function Home() {
           scrollingSpeed={1000}
           navigation={true}
           navigationPosition={"right"}
-          navigationTooltips={["Home", "About", "Services", "Contact"]}
+          navigationTooltips={["Home", "Experience", "Contact", "Projects"]}
           showActiveTooltip={true}
           credits={{ enabled: false }}
           render={({ state, fullpageApi }) => {
@@ -92,25 +92,26 @@ export default function Home() {
                       </div>
                     </nav>
 
-                    <div className="container mx-auto px-4 md:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between py-16">
-                      <div className="lg:w-1/2 animate-fade-in-left mt-0">
+                    <div className="mx-auto flex flex-col lg:flex-row items-center py-4 ml-4">
+                        <div className="lg:w-1/2 animate-fade-in-left flex flex-col justify-center">
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                           HEY! I'm Saifullah{" "}
                           <span className="animated-gradient-text">
-                            Professional <br /> 
-                            Software Engineer
+                          Professional <br /> 
+                          Software Engineer
                           </span>
                         </h1>
                         <p className="text-lg mb-6 font-medium tracking-wide">
                           Running 2 Batches With More Than{" "}
                           <span className="text-emerald-400">
-                            1000+ Students For Free
+                          1000+ Students For Free
                           </span>
                         </p>
-                        <LinkedInFollowersButton companyId="your-linkedin-company-id" />
-                      <Marquee3D />
-
-                      </div>
+                        <div className="flex items-center gap-4">
+                          <LinkedInFollowersButton companyId="your-linkedin-company-id" />
+                          <DockDemo />
+                        </div>
+                        </div>
                       {/* Replace Image with WavyImage */}
                       <WavyImage />
                     </div>
@@ -208,7 +209,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white">Phone</h3>
-                <p className="text-white">+1 (123) 456-7890</p>
+                <p className="text-white">+92 3705764856</p>
               </div>
               </div>
 
@@ -256,7 +257,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white">Location</h3>
-                <p className="text-white">San Francisco, CA</p>
+                <p className="text-white">Mardan District, Khyber Pakhtunkhwa, Pakistan</p>
               </div>
               </div>
             </div>
@@ -271,9 +272,9 @@ export default function Home() {
 
 
                 {/* Section 4: Contact */}
-                <div className="section section-4 min-h-screen flex items-center relative bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.05),transparent_70%)]">
+                <div className="section section-4 min-h-screen flex items-center relative overflow-y-hidden" style={{ backgroundColor: "#0f172a" }}>
                   <div
-                    className="absolute inset-0 z-10 pointer-events-none"
+                    className="absolute inset-0 z-10 pointer-events-none "
                     style={{
                       backgroundImage: `
                         radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), 
@@ -284,88 +285,11 @@ export default function Home() {
                       backgroundRepeat: "repeat, repeat, repeat",
                     }}
                   ></div>
-                  <div className="container mx-auto px-4 md:px-6 lg:px-8 py-16">
-                    <div className="max-w-4xl mx-auto text-center">
-                      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in">
-                        Ready to{" "}
-                        <ShinyText
-                          text="Transform"
-                          disabled={false}
-                          speed={3}
-                          className="custom-class"
-                        />{" "}
-                        Your Business?
-                      </h2>
-                      <p className="text-xl mb-12 text-gray-200 max-w-3xl mx-auto">
-                        Join hundreds of successful agencies and coaches who
-                        have scaled their businesses with our proven methods.
-                      </p>
-
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                        <div className="bg-emerald-900/20 p-8 rounded-xl transition-all duration-300 hover:-translate-y-2">
-                          <h3 className="text-2xl font-bold mb-4">Starter</h3>
-                          <div className="text-4xl font-bold mb-4">
-                            $997
-                            <span className="text-sm font-normal">/mo</span>
-                          </div>
-                          <p className="text-gray-300 mb-6">
-                            Perfect for new businesses looking to establish
-                            their brand.
-                          </p>
-                          <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white rounded-full transition-all duration-300">
-                            Get Started
-                          </Button>
-                        </div>
-
-                        <div className="bg-emerald-800/30 p-8 rounded-xl transform scale-105 shadow-xl transition-all duration-300 hover:-translate-y-2">
-                          <div className="bg-emerald-500 text-white text-sm font-bold py-1 px-3 rounded-full inline-block mb-4">
-                            MOST POPULAR
-                          </div>
-                          <h3 className="text-2xl font-bold mb-4">Growth</h3>
-                          <div className="text-4xl font-bold mb-4">
-                            $1,997
-                            <span className="text-sm font-normal">/mo</span>
-                          </div>
-                          <p className="text-gray-200 mb-6">
-                            For established businesses ready to scale their
-                            lead generation.
-                          </p>
-                          <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white rounded-full transition-all duration-300">
-                            Get Started
-                          </Button>
-                        </div>
-
-                        <div className="bg-emerald-900/20 p-8 rounded-xl transition-all duration-300 hover:-translate-y-2">
-                          <h3 className="text-2xl font-bold mb-4">
-                            Enterprise
-                          </h3>
-                          <div className="text-4xl font-bold mb-4">
-                            $4,997
-                            <span className="text-sm font-normal">/mo</span>
-                          </div>
-                          <p className="text-gray-300 mb-6">
-                            Comprehensive solution for agencies looking for
-                            rapid growth.
-                          </p>
-                          <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white rounded-full transition-all duration-300">
-                            Get Started
-                          </Button>
-                        </div>
-                      </div>
-
-                      <Button
-                        size="lg"
-                        className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-full px-12 py-8 text-xl transition-all duration-300 transform hover:scale-105"
-                      >
-                        INTERESTED? LET'S CHAT!
-                      </Button>
-
-                      <div className="mt-16 text-gray-400 text-sm">
-                        Copyright © {new Date().getFullYear()} · All rights
-                        reserved
-                      </div>
-                    </div>
-                  </div>
+                <div className="flex items-center justify-center w-full h-full">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-200">
+                    Recent Projects (Upcoming)
+                  </h1>
+                </div>
                 </div>
               </div>
             );
